@@ -1,0 +1,17 @@
+const express=require("express")
+const router=express.Router()
+const costumerController=require("../controller/costumerController")
+router.post("/register",costumerController.CustomerRegi)
+router.post("/login",costumerController.Customerlogin)
+router.post('/userauthenticate',costumerController.userAuthenticate)
+router.post('/resetpassword',costumerController.resetPassword)
+router.post('/profile',costumerController.profile)
+router.post('/balance',costumerController.balance)
+router.post('/deposite',costumerController.deposite)
+router.post('/withdraw',costumerController.withdraw)
+router.post('/transaction',costumerController.transaction)
+router.post('/Statement',costumerController.Statement)
+router.post('/forgotpassword',costumerController.forgotpassword)
+
+router.post('/googlelogin',costumerController.googleLogin)
+module.exports=router
